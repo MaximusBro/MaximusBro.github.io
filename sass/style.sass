@@ -1,0 +1,146 @@
+/* CREATED SPECIAL FOR PALETA PLUS 2022 */
+
+$headerbc_color: rgba(133, 59, 23, 0.85)
+$main_color: #ca580c
+$header_fonts-list: "Convergence"
+$header_fonts-text: "Barlow Semi Condensed"
+$intro_text: "Lato"
+$info_next-text: "Barlow Semi Condensed"
+/*FONTS START*/
+@font-face
+	font-family: "Barlow Semi Condensed"
+	font-style: normal
+	font-weight: 400
+	src: local(""), url("../fonts/barlow-semi-condensed-v13-latin-regular.woff2") format("woff2"),
+	url("../fonts/barlow-semi-condensed-v13-latin-regular.woff")
+@font-face
+	font-family: "Barlow Semi Condensed"
+	font-style: normal
+	font-weight: 700
+	src: local(""), url("../fonts/barlow-semi-condensed-v13-latin-700.woff2") format("woff2"),
+	url("../fonts/barlow-semi-condensed-v13-latin-700.woff") format("woff") 
+
+/* convergence-regular - latin */
+
+@font-face
+	font-family: "Convergence"
+	font-style: normal
+	font-weight: 400
+	src: local(""), url("../fonts/convergence-v13-latin-regular.woff2") format("woff2"),
+	url("../fonts/convergence-v13-latin-regular.woff") format("woff") 
+/*FONTS END*/
+
+/*TAGS START*/
+
+html
+	box-sizing: border-box
+*,
+*::before,
+*::after
+	box-sizing: inherit
+body
+	color: #ffffff
+	font-family: $header_fonts-text
+img
+	max-width: 100%
+	height: auto
+a
+	color: #ffffff
+	text-decoration: none
+button
+	border: 0
+	background: none
+	color: white
+	font-size: 25px
+	line-height: 21px
+	font-family: $header_fonts-list
+
+body
+	background: #030303
+main
+
+	padding-bottom: 350px
+
+/*TAGS END*/
+
+/*INTRO START*/
+.intro
+	height: 100vh
+	background: url(../img/item_13_big1.jpg) no-repeat center
+	background-size: cover
+
+.intro__block
+	padding-top: 440px
+
+.intro__title
+	font-style: normal
+	font-weight: bold
+	font-size: 36px
+	line-height: 43px
+	margin: 0 auto
+	max-width: 682px
+	text-align: center
+	text-transform: uppercase
+	margin-bottom: 60px
+	background: rgba(133, 59, 23, 0.6)
+
+.intro__button
+	text-align: center
+
+.intro__next:hover
+	background-color: rgba(255, 255, 255, 0.3)
+
+.intro__next
+	font-family: $intro_text
+	font-style: normal
+	font-weight: normal
+	font-size: 20px
+	line-height: 14px
+	text-align: center
+	text-transform: uppercase
+	background-image: none
+	background-color: transparent
+	color: rgba(255, 255, 255, 0.9)
+	padding: 12px 25px
+	background: rgba(133, 59, 23, 0.6)
+	border: 2px solid rgba(0, 0, 0, 0.384)
+/*INTRO END*/
+
+/*INFO START*/
+
+.info
+	padding-top: 112px
+	max-height: 2500px
+
+.info__blocks-colums
+	display: flex
+	flex-direction: column
+	gap: 150px
+
+.info__block
+	border: rgb(146, 82, 23) 2px solid
+	display: flex
+
+.info__text
+	font-family: $info_next-text
+	font-weight: 250
+	font-size: 24px
+	line-height: 29px
+	margin: 200px 20px 200px 20px
+	text-transform: uppercase
+
+.info__item
+	img
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+		border-radius: 4px
+		max-width: 532px
+		max-height: 430px
+		margin: 35px
+	/*INFO END*/
+@import "_header"
+@import "_form__send"
+@import "_modal"
+@import "_footer"
+@import "_disposal"
+@import "_corrug"
+@import "_media"
