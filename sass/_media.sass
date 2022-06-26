@@ -4,6 +4,9 @@
 		display: inline-block
 		span
 			font-size: 20px
+	.header__list
+		p
+			font-size: 17px
 	.info__item
 		img
 			display: none
@@ -27,24 +30,82 @@
 		.subheader__phone
 			font-size: 18px
 @media(max-width:767px)
-	.header__list
+	.header
+		&__list
 		li:nth-child(1)
 			list-style: none
-	.header__list
+		&__list
 		li:nth-child(2)
 			list-style: none
-	.header__list
+		&__list
 		li:nth-child(3)
 			list-style: none
+		&__nav
+			position: fixed
+			top: 0%
+			left: -100%
+			width: 50%
+			height: 100vh
+			padding: 20px 15px
+			background: $headerbc_color
+			transition: 0.6s all
+		&__active
+			left: 0
+		&__list
+			flex-direction: column
+			align-items:
+			margin-left:
+		&__sub-list
+			max-width: 160px
+			position: static
+			align-items: center
+
+	.hamburger
+		display: block
+		position: absolute
+		right: 20px
+		top: 50px
+		transform: translateY(-50%)
+		width: 20px
+		height: 12px
+		span
+			display: block
+			height: 2px
+			width: 100%
+			background-color: #fff
+			margin-bottom: 2px
+			transition: 0.5s all
+		&__active
+			span
+				margin-bottom: -2px
+				&:nth-child(1)
+					transform: translateY(3px) rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: translateY(3px) rotate(45deg)
 	.slider__img
 		display: none
 	.disposal__area
 		display: block
+
 @media(max-width:540px)
 	form
-		min-width: 350px
+		align-items: center
+		textarea
+			max-width: 150px
+	input:last-child
+		margin: 0
 	.corrug__box
 		h2
 			font-size: 19px
 		p
 			font-size: 16px
+	.footer__geo
+		min-width: 315px
+@media(max-width:380px)
+	form
+		align-items: baseline
+		input:last-child
+			margin: 0 0 0 0
+			align-items: baseline

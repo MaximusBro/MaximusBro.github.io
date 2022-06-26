@@ -7,10 +7,8 @@
 	width: 100%
 	margin-top: 16px
 	min-height: 90px
-
 .header__wrapper
 	display: flex
-	flex-wrap: wrap
 	align-items: center
 	justify-content: space-between
 .header__logo
@@ -26,88 +24,91 @@
 	a
 		img
 			max-height: 100%
+
 .header__logo-link
 	text-decoration: none
 	color: white
 .header__logo-text
-
 	font-family: $header_fonts-text
 	font-style: normal
 	font-weight: 700
 	font-size: 35px
 	text-transform: uppercase
-
-.header__logo-tel
-	padding-left: 15%
-	text-align: center
-	text-decoration: underline
-	font-size: 25px
 .header__list
-	font-family: $header_fonts-list
-	font-style: normal
-	font-weight: normal
-	font-size: 18px
+	padding-left: 7px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	p
+		font-family: 'Convergence'
+		font-style: normal
+		font-weight: 400
+		font-size: 23px
+		cursor: pointer
+	li
+		max-width: 250px
+		margin-bottom: 10px
+		padding-bottom: 10px
+		padding: 0 20px
+
+	li:last-child
+		margin: 0
+	.header__sub-link:nth-child(1)
+		span
+			color: #FFD600E5
+		p
+			margin-top: 10px
+	.header__sub-link:nth-child(2)
+		span
+			color: #05FF00
+		p
+			margin-top: 10px
+.header__list-item
+	margin-top: 13px
+	align-items: center
 	display: flex
 	flex-wrap: wrap
-.header__list
-	li:nth-child(1)
-		list-style: url(../img/png/icons8-human-resources-481.png)
-.header__list
-	li:nth-child(2)
-		list-style: url(../img/png/icons8-call-481.png)
-.header__list
-	li:nth-child(3)
-		list-style: url(../img/png/icons8-comments-481.png)
-.header__item
-	font-family: $header_fonts-list
-	margin-right: 60px
-.header__item:last-child
-	margin-right: 0
-.header__link
-	font-size: 25px
-	line-height: 25px
-	color: white
-	text-decoration: none
-	cursor: pointer
+.header__arrows__active
+	.header__arrow
+		transform: rotate(-180deg)
+.header__arrow
+	display: block
+	border-left: 5px solid transparent
+	border-right: 5px solid transparent
+	border-top: 10px solid #fff
+	width: 0
+	height: 0
+	transition: transform 0.3s ease 0s
+	margin-left: 5px
+
+.header__sub-list
+	position: absolute
+	top: 65%
+	max-width: 140px
+	background: #000
+	padding: 10px 0
+	border: 1px solid $main_color
+	display: none
+	p
+		max-width: 163px
+		font-family: 'Convergence'
+		font-style: normal
+		font-weight: 400
+		font-size: 19px
+		cursor: auto
+	a
+		font-family: 'Convergence'
+		font-style: normal
+		font-weight: 400
+		font-size: 19px
+#contacts
+	.header__sub-list
+		max-width: 170px
+.header__sub-link__active
+	display: block
 .header__link:hover,
 .header__link:focus,
 .header__link:active
 	color: #ffd600
-.header__link-scroll
-	position: absolute
-	min-width: 200px
-.header__scroll-item
-	max-width: 180px
-	background: #030303
-	border: #c4c4c4 1px solid
-	text-align: center
+.hamburger
 	display: none
-.scroll-item__call
-	display: block
-	color: #ffffff
-	text-decoration: underline
-.header__start
-	text-align: start
-	padding-bottom: 5px
-	font-size: 23px
-	line-height: 25px
-.scroll-text
-	font-family: $header_fonts-list
-	font-style: normal
-	font-weight: 400
-	font-size: 20px
-	text-decoration: underline
-	display: block
-	padding-bottom: 5%
-.header__link-scroll
-	.scroll-text
-		text-align: start
-.header__scroll-item:first-child
-	.scroll-text
-		color: #e6c019
-.header__scroll-item:last-child
-	.scroll-text
-		color: rgba(255, 147, 75, 0.918)
-.header__item:hover
-	.header__scroll-item
-		display: block
