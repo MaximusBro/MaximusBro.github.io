@@ -33,7 +33,7 @@ $(document).ready(function () {
 		autoplaySpeed: 1000
 	});
 });
-// Menu burger
+// Menu burger and header__list interactive
 const iconMenu = document.querySelector(".hamburger");
 const contacts = document.getElementById("contacts");
 const services = document.getElementById("services");
@@ -72,3 +72,14 @@ if (services) {
 		}
 	});
 }
+const showMore = document.getElementById("showmore");
+showMore.addEventListener('click', function (e) {
+	e.preventDefault();
+
+	const blockID = showMore.getAttribute('href').substr(1);
+
+	document.getElementById(blockID).scrollIntoView({
+		behavior: 'smooth',
+		block: 'start'
+	});
+})
