@@ -39,6 +39,10 @@ const contacts = document.getElementById("contacts");
 const services = document.getElementById("services");
 let menuArrows = document.querySelectorAll(".header__arrow");
 let headerItems = document.querySelectorAll(".header__list-item");
+const subContact = contacts.querySelector(".header__sub-list");
+const subService = services.querySelector(".header__sub-list");
+const headerItemsContacts = headerItems[1];
+const headerItemsServices = headerItems[0];
 if (iconMenu) {
 	const MenuBody = document.querySelector(".header__nav");
 	iconMenu.addEventListener("click", function (e) {
@@ -48,18 +52,23 @@ if (iconMenu) {
 }
 // Modal windows for header__list
 if (services) {
-	const subService = services.querySelector(".header__sub-list");
-	const headerItemsServices = headerItems[0];
+
 	services.addEventListener("click", function (e) {
 		subService.classList.toggle("header__sub-link__active");
 		headerItemsServices.classList.toggle("header__arrows__active");
+		if (subContact.classList.contains("header__sub-link__active")) {
+			subContact.classList.remove("header__sub-link__active");
+			headerItemsContacts.classList.toggle("header__arrows__active");
+		}
 	});
 }
 if (services) {
-	const subContact = contacts.querySelector(".header__sub-list");
-	const headerItemsContacts = headerItems[1];
 	contacts.addEventListener("click", function (e) {
 		subContact.classList.toggle("header__sub-link__active");
 		headerItemsContacts.classList.toggle("header__arrows__active");
+		if (subService.classList.contains("header__sub-link__active")) {
+			subService.classList.remove("header__sub-link__active");
+			headerItemsServices.classList.toggle("header__arrows__active");
+		}
 	});
 }
