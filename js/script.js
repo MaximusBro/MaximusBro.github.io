@@ -52,7 +52,6 @@ if (iconMenu) {
 }
 // Modal windows for header__list
 if (services) {
-
 	services.addEventListener("click", function (e) {
 		subService.classList.toggle("header__sub-link__active");
 		headerItemsServices.classList.toggle("header__arrows__active");
@@ -72,14 +71,18 @@ if (services) {
 		}
 	});
 }
+
 const showMore = document.getElementById("showmore");
-showMore.addEventListener('click', function (e) {
-	e.preventDefault();
+if (showMore) {
+	showMore.addEventListener('click', function (e) {
+		e.preventDefault();
 
-	const blockID = showMore.getAttribute('href').substr(1);
+		const blockID = showMore.getAttribute('href').substr(1);
 
-	document.getElementById(blockID).scrollIntoView({
-		behavior: 'smooth',
-		block: 'start'
+		document.getElementById(blockID).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		});
 	});
-});
+}
+
