@@ -1,38 +1,15 @@
-$(document).ready(function () {
-	//Modal
-	$("[data-modal=fastOrder]").on("click", function () {
-		$('.overlay, #fastOrder').fadeIn("slow")
+const iconMenu = document.querySelector(".hamburger");
+const categoriesList = document.getElementById("categories");
+const headerArrow = document.querySelector(".header__arrow");
+if (iconMenu) {
+	const MenuBody = document.querySelector(".header-nav");
+	iconMenu.addEventListener("click", function (e) {
+		iconMenu.classList.toggle("hamburger__active");
+		MenuBody.classList.toggle("header-nav__active");
 	});
-	$(".modal__close").on("click", function () {
-		$(".overlay,#fastOrder,#thanks").fadeOut('slow')
+}
+if (categoriesList) {
+	categoriesList.addEventListener("click", function () {
+		headerArrow.classList.toggle("header__arrow-active");
 	});
-
-
-
-	$("input[name=number]").mask("+38(999) 999-99-99");
-
-	$('.slider__img').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 1000
-	});
-
-	$("form").submit(function (e) {
-		e.preventDefault();
-		$.ajax({
-			type: "POST",
-			url: "../mailer/smart.php",
-			data: $(this).serialize()
-		}).done(function () {
-			$(this).find("input").val("");
-			$("#fastOrder").fadeOut();
-			$(".overlay, #thanks").fadeIn();
-
-			$("form").trigger("reset");
-		});
-		return false;
-	});
-
-});
+}
